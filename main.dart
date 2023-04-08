@@ -336,7 +336,7 @@ class _MyAppState extends State<MyApp> {
                                     ),
                                     onChanged: (value) {
                                       setState(() {
-                                        form['dia'] = (int.tryParse(value) ?? 0) > daysInMonth(DateTime.now().year, mes) ? (int.tryParse(value) ?? 0) : daysInMonth(DateTime.now().year, mes);
+                                        form['dia'] = (int.tryParse(value) ?? 0) < daysInMonth(DateTime.now().year, mes) ? (int.tryParse(value) ?? 0) : daysInMonth(DateTime.now().year, mes);
                                       });
                                     },
                                   ),
